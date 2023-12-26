@@ -1,0 +1,476 @@
+/* Config */
+
+@font-face {
+    font-family:"Montserrat" ;
+    src: url(Ressources/font/Montserrat-Medium.ttf);
+}
+
+html{
+overflow-x: hidden;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 0;
+}
+
+/* Transform */
+
+@keyframes opacite{
+    0%{
+        opacity: 0%;
+        translate: 0 100px;
+    }
+    100%{
+        opacity: 20%;
+        translate: 0px;
+    }
+}
+
+@keyframes slidegauche {
+    0%{
+        translate:-800px;
+        color: #C3ACD0;
+    }
+    100%{
+        translate: 0px;
+        color: black;
+    }
+}
+
+@keyframes slidedroite {
+    0%{
+        translate:800px;
+    }
+    100%{
+        translate: 0px;
+    }
+}
+
+/* Contenus */
+
+#background{
+    position: absolute;
+    background-size: cover;
+    animation: opacite 1s 1 forwards;
+    top: 35%;
+    right: 35%;
+    width: 30% ;
+    height: 50%;
+}
+
+#logo{ 
+    width: 8vw;
+    transition: all 0.5s;
+}
+
+#caracter{
+    display: flex;
+    align-items: flex-start;
+    width: 30vw;
+}
+
+.entraide{
+    width: 30%; 
+    box-shadow: 20px 20px 60px rgb(73, 73, 73);
+
+}
+.fiabilité{
+    width: 22%;
+}
+
+.bas h2{
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+}
+.bas p{
+    font-size: 1.2em;
+}
+a.boutons{
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    border-radius: 20px;
+    padding : 20px;
+    transition: all 0.5s;
+    font-size: 1.4em;
+}   
+
+h1{
+    font-size: 3em;
+}
+
+p{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    display: none;
+    position : absolute;
+    left: 20px;
+    top: 50px;
+    width: 10%;
+}
+
+.mobile-menu {
+    margin-left: 5%;
+}
+
+.DarkMode {
+    padding : 10px;
+    background: transparent;
+}
+
+#DarkMode{
+    padding : 10px;
+    background: transparent;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* conteneurs */
+
+body{
+    background: url("logo site web.png") no-repeat;
+    background-size: cover;
+    font-size: 1.1em;
+    background: linear-gradient(#F7EFE5, #7743DB);
+}
+
+header{
+    height: 20vh ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2vw;
+}
+
+footer{
+    height: 20vh ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2vw;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.haut{
+    height :80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.bas{
+    height :120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 40px;
+}
+
+.deux{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap : 40px;
+    width: 92vw;
+    height: 150vh;
+    margin-top: 10vh;
+}
+.texte{
+    max-width: 40vw;
+}
+.background{
+    background-color: #C3ACD0;
+    border-radius: 8vh;
+    padding: 3vh;
+    box-shadow: 20px 20px 60px rgb(73, 73, 73);
+}
+
+.simple{
+    margin-top: 5vh;
+
+}
+.collab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+}
+
+.Nouveautes{
+    display:flex;
+    width: 20%;   
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    animation: slidedroite 1.5s 1 forwards;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 40vw;
+    font-size: 1.15em;
+    gap: 30px;
+    margin-top: 10vh;
+    animation: slidegauche 1.5s 1 forwards;
+}
+#HitExplainer{
+    transition: all 0.5s;
+}
+/* Transitions */
+
+#logo:hover{
+    transform: scale(120%);
+}
+
+.boutons:hover{
+    transform: scale(135%);
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.Nouveaute>a{
+    background-color:#F7EFE5;
+}
+
+#HitExplainer:hover{
+    translate: 0 -200px;
+}
+
+#HitExplainer::before{ /*ligne en dessous du titre*/
+    position: absolute;
+    height: 0%;
+    width: 200px;
+    top : 90px;
+    left: 0;
+    opacity: 0%;
+    content:"Fiable Simple Clair Collaboratif";
+    background-color:transparent;
+    transition : all 1s;
+}
+
+#HitExplainer:hover::before{
+    height: 100%;
+    opacity: 100%;
+    font-size: .65em;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Responsive design */
+
+@media screen and (max-width:1420px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 35%;
+        right: 33%;
+        width: 35% ;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width:1286px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 35%;
+        right: 30%;
+        width: 40%  ;
+        height: 50%;
+    }
+
+    a.boutons{
+        text-decoration: none;
+        color: black;
+        background-color: transparent;
+        border-radius: 20px;
+        padding : 20px;
+        transition: all 0.5s;
+        font-size: 1.1em;
+    }   
+}
+
+@media screen and (max-width:1069px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 37%;
+        right: 30%;
+        width: 45%  ;
+        height: 45%;
+    }
+    #caracter {
+        display:none;
+    }
+
+}
+@media screen and (max-width:897px) {
+    h1{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width:768px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 40%;
+        right: 30%;
+        width: 50%;
+        height: 40%;
+    }
+}
+
+@media screen and (max-width:592px) {
+    .haut{
+        flex-direction: column;
+    }
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        height: 20vh;
+        width: auto;
+        font-size: 1.15em;
+        gap: 30px;
+        margin-top: 10vh;
+        animation: slidegauche 1.5s 1 forwards;
+    }
+    #HitExplainer:hover::before{
+        height: 100%;
+        opacity: 100%;
+        font-size: .8em;
+        font-family: "Montserrat", sans-serif;
+    }
+    #HitExplainer:hover{
+        translate: 0 -150px;
+    }
+    #HitExplainer::before{ /*ligne en dessous du titre*/
+        position: absolute;
+        height: 0%;
+        width: 200px;
+        top :50px;
+        left: 0;
+        opacity: 0%;
+        content:"Fiable Simple Clair Collaboratif";
+        background-color:transparent;
+        transition : all 1s;
+    }
+    .entraide{
+        display: none;
+    }
+    .fiabilité{
+        display: none;
+    }
+    .bas p{
+        font-size: .9em;
+    }
+    .texte{
+        max-width: 80vw;
+    }
+    a.boutons{
+        text-decoration: none;
+        color: black;
+        background-color: transparent;
+        border-radius: 10px;
+        padding : 10px;
+        transition: all 0.5s;
+        font-size: 1em;
+    }
+    nav {
+        gap: 0%;
+        padding: 0;
+        width: 49vw;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 8px;
+    }
+    .menu {
+        display: block;
+    }
+    .participer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.318);
+        backdrop-filter: blur(10px);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -105%;
+        transition: all 0.5s ease;
+        font-size: 1.5em;
+    }
+    
+    .boutons {
+        margin: 30px;
+    }
+
+    .mobile-menu {
+        margin-left: 0%;
+        z-index: 1;
+    }
+} 
+
+@media screen and (max-width:500px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 42%;
+        right: 30%;
+        width: 50%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 42%;
+        right: 30%;
+        width: 50%;
+        height: 27%;
+    }
+}
+
+.dark-mode {
+    background: linear-gradient(#321664,#6c509e); /* Couleur de fond en mode sombre */
+    color: #bb86fc; /* Couleur du texte en mode sombre */
+}
+
+.dark-mode a {
+    color: #bb86fc; /* Couleur des liens en mode sombre */
+}
+
+.dark-mode .bouton {
+    background-color: #bb86fc; /* Couleur des boutons en mode sombre */
+}
+
+.bas {
+    color: black;
+}

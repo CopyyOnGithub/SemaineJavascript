@@ -1,0 +1,356 @@
+/* Config */
+
+@font-face {
+    font-family:"Montserrat" ;
+    src: url(Ressources/font/Montserrat-Medium.ttf);
+}
+
+html{
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Transform */
+
+@keyframes opacite{
+    0%{
+        opacity: 0%;
+        translate: 0 100px;
+    }
+    100%{
+        opacity: 20%;
+        translate: 0px;
+    }
+}
+
+  /* Contenus */
+
+#background{
+    position: absolute;
+    background-size: cover;
+    animation: opacite 1s 1 forwards;
+    top: 35%;
+    right: 35%;
+    width: 30vw;
+    height: 50vh;
+
+}
+
+#logo{ 
+    width: 8vw;
+    transition: all 0.5s;
+}
+
+a.boutons{
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    border-radius: 30px;
+    padding : 20px;
+    transition: all 0.5s;
+    font-size: 1.5em; 
+}
+
+main a{
+    color: black;
+    text-decoration: none;
+    font-size : 2em;
+}
+
+h1{
+    font-size: 3em;
+}
+
+p{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    display: none;
+    position : absolute;
+    left: 20px;
+    top: 50px;
+    width: 10%;
+}
+
+.mobile-menu {
+    margin-left: 5%;
+}
+
+#DarkMode{
+    padding : 10px;
+    background: transparent;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* conteneurs */
+
+body{
+    background: url("logo site web.png") no-repeat;
+    background-size: cover;
+    background: linear-gradient(#F7EFE5, #7743DB);
+}
+
+header{
+    height: 20vh ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2vw;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    height: 20vh ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2vw;
+}
+
+.haut{
+    height :85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bas{
+    height :95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap : 40px;
+}
+.sanstitre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap : 5vh
+}
+
+.musique{
+    display: flex;
+    overflow: hidden;
+    justify-content:space-between;
+    font-size: 1.5em;
+    height: auto;
+    width: 75%;
+    background-color:#C3ACD0;
+    border-radius: 4vh;
+    align-items: center;
+    box-shadow: 20px 20px 60px rgb(73, 73, 73);
+    transition: all 0.5s;
+}
+
+.image{
+    width: 20%;
+}
+
+/* Transitions */
+
+#logo:hover{
+    transform: scale(120%);
+}
+
+.musique:hover{
+    transform: scale(105%);
+}
+
+.boutons:hover{
+    transform: scale(135%);
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+/* responsive design */
+
+@media screen and (max-width:1420px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 35%;
+        right: 33%;
+        width: 35% ;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width:1286px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 35%;
+        right: 30%;
+        width: 40%  ;
+        height: 50%;
+    }
+
+    a.boutons{
+        text-decoration: none;
+        color: black;
+        background-color: transparent;
+        border-radius: 20px;
+        padding : 20px;
+        transition: all 0.5s;
+        font-size: 1.1em;
+    }   
+}
+
+@media screen and (max-width:1069px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 37%;
+        right: 30%;
+        width: 45% ;
+        height: 45%;
+    }
+    #caracter {
+        display:none;
+    }
+    .image{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:897px) {
+    h1{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width:768px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 40%;
+        right: 30%;
+        width: 50%;
+        height: 40%;
+    }
+    .image{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:592px) {
+    .musique{
+        display: flex;
+        overflow: hidden;
+        justify-content:space-around;
+        font-size: 1.1em;
+        height: auto;
+        width: 75%;
+        background-color:#C3ACD0;
+        border-radius: 4vh;
+        align-items: center;
+        box-shadow: 20px 20px 60px rgb(73, 73, 73);
+        transition: all 0.5s;
+    }
+    
+    .image{
+        width: 40%;
+    }
+    nav {
+        gap: 0%;
+        padding: 0;
+        width: 49vw;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 8px;
+    }
+    .menu {
+        display: block;
+    }
+    .participer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.318);
+        backdrop-filter: blur(10px);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -105%;
+        transition: all 0.5s ease;
+        font-size: 1.5em;
+    }
+    
+    .boutons {
+        margin: 30px;
+    }
+    
+    .mobile-menu {
+        margin-left: 0%;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 42%;
+        right: 30%;
+        width: 50%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    #background{
+        position: absolute;
+        background-size: cover;
+        animation: opacite 1s 1 forwards;
+        top: 42%;
+        right: 30%;
+        width: 50%;
+        height: 27%;
+    }
+}
+
+.dark-mode {
+    background: linear-gradient(#321664,#6c509e); /* Couleur de fond en mode sombre */
+    color: #bb86fc; /* Couleur du texte en mode sombre */
+}
+
+.dark-mode a {
+    color: #bb86fc; /* Couleur des liens en mode sombre */
+}
+
+.dark-mode .bouton {
+    background-color: #bb86fc; /* Couleur des boutons en mode sombre */
+}
+
+.haut{
+    color:black;
+}
+
+.bas{
+    color:black;
+}
